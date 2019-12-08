@@ -70,6 +70,3 @@ Icon
 *.crt
 *.pem
 *.key
-
-# Vim modules installed with git submodule
-#
