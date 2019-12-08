@@ -1,0 +1,5 @@
+AwesomePrint.defaults = {
+  :plain  => false,
+  :html   => false,
+  :indent => -2 # align hashes to the left
+}

@@ -1,0 +1,11 @@
+# No noise
+set bell-style none
+
+# Support UTF-8 input
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Show extra file information when completing ( see `ls -F` for example )
+set visible-stats on
