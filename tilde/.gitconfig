@@ -1,0 +1,36 @@
+[color]
+  ui = auto
+
+[color "diff"]
+  meta = blue
+  frag = white
+  old = red bold
+  new = green bold
+
+[core]
+	excludesfile = ~/.gitignore
+	pager = diff-so-fancy | less --chop-long-lines --quit-if-one-screen --no-init --tabs=1,5 -R
+	autocrlf = false
+	safecrlf = false
+	mergeoptions = --no-edit
+	quotepath = false
+	# Enable parallel index preload for operations like git diff
+	preloadindex = true
+
+[push]
+	# When pushing code, always push only current branch to remote branch with the same name
+	default = current
+
+[fetch]
+	# Automatically prune deleted branches
+	prune = true
+
+[log]
+	# Show branch names with git log
+	decorate = short
+
+# Include local settings
+# git config -f ~/.gitlocal user.name "Denis Vazhenin"
+# git config -f ~/.gitlocal user.email "denis.vazhenin@me.com"
+[include]
+  path = .gitlocal
