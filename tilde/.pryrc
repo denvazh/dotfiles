@@ -18,12 +18,14 @@ rescue Exception => e
 end
 
 # Provide access to pbcopy/pbpaste from pry ( works only on OS X )
-def pbcopy(input)
-  str = input.to_s
-  IO.popen('pbcopy', 'w') { |f| f << str }
-  str
-end
+if RUBY_PLATFORM =~ /darwin/
+  def pbcopy(input)
+    str = input.to_s
+    IO.popen('pbcopy', 'w') { |f| f << str }
+    str
+  end
 
-def pbpaste
-  `pbpaste`
+  def pbpaste
+    `pbpaste`
+  end
 end
