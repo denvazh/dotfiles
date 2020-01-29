@@ -24,7 +24,7 @@ esac
 [[ -d "$YARN_BIN_DIR" ]] && _prepend_path "$YARN_BIN_DIR"
 [[ -d ~/dotfiles/bin ]] && _prepend_path "$HOME/dotfiles/bin"
 [[ -d ~/bin ]] && _prepend_path "$HOME/bin"
-[[ -d /Applications/IntelliJ\ IDEA.app/Contents/MacOS ]] && _prepend_path "/Applications/IntelliJ\ IDEA.app/Contents/MacOS"
+[[ -d /Applications/IntelliJ\ IDEA.app/Contents/MacOS ]] && _prepend_path "/Applications/IntelliJ IDEA.app/Contents/MacOS"
 export PATH
 
 # Remove duplicates

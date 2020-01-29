@@ -6,7 +6,7 @@ export LC_ALL=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vi'
 else
-  export EDITOR='idea'
+  export EDITOR='subl'
 fi
 
 # TODO: configure less
