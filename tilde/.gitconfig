@@ -16,6 +16,7 @@
 	quotepath = false
 	# Enable parallel index preload for operations like git diff
 	preloadindex = true
+	editor = "subl -n -w"
 
 [push]
 	# When pushing code, always push only current branch to remote branch with the same name
