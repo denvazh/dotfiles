@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+case "$OSTYPE" in
+  darwin*)
+    pgrep mDNSResponder | sudo xargs kill -9
+  ;;
+  *)
+    echo "Unable to flush DNS cache for unknown OS"
+    exit 1
+  ;;
+esac
+
