@@ -2,7 +2,7 @@
 
 case "$OSTYPE" in
   darwin*)
-    pgrep mDNSResponder | sudo xargs kill -9
+    pgrep mDNSResponder$ | sudo xargs kill -9
   ;;
   *)
     echo "Unable to flush DNS cache for unknown OS"
