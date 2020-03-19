@@ -20,7 +20,9 @@ export NVM_DIR="$HOME/.nvm"
 # Yarn executables
 YARN_BIN_DIR=
 if which yarn > /dev/null; then
-  YARN_BIN_DIR="$(yarn global bin)"
+  export YARN_BIN_DIR="$(yarn global bin)"
+elif [[ -d "$HOME/.yarn/bin" ]]; then
+  export YARN_BIN_DIR="$HOME/.yarn/bin"
 fi
 
 # Android
