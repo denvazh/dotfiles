@@ -25,6 +25,7 @@ esac
 [[ -d ~/dotfiles/bin ]] && _prepend_path "$HOME/dotfiles/bin"
 [[ -d ~/bin ]] && _prepend_path "$HOME/bin"
 [[ -d /Applications/IntelliJ\ IDEA.app/Contents/MacOS ]] && _prepend_path "/Applications/IntelliJ IDEA.app/Contents/MacOS"
+[[ -d "$BEALL_DIR/bin" ]] && _prepend_path "$BEALL_DIR/bin"
 export PATH
 
 # Remove duplicates

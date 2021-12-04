@@ -6,7 +6,7 @@ export LC_ALL=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vi'
 else
-  export EDITOR='subl'
+  export EDITOR='vim'
 fi
 
 # TODO: configure less
@@ -32,3 +32,6 @@ case "$OSTYPE" in
     echo "Nobody should use Windows for development"
   ;;
 esac
+
+# Beall
+export BEALL_DIR="${HOME}/devel/workspace/beall"

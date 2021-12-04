@@ -7,7 +7,7 @@ export ZSH_THEME="mh"
 
 # oh-my-zsh plugins (can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins should be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git git-flow github brew sublime npm vagrant docker)
+plugins=(git git-flow github brew sublime npm vagrant docker docker-compose)
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -28,8 +28,19 @@ case "$OSTYPE" in
 
     # Load zsh syntax highlight
     [[ -f ${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+    # Load zsh completion for beall
+    [[ -f ${BEALL_DIR}/completion.zsh ]] && source ${BEALL_DIR}/completion.zsh
   ;;
 esac
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+# the fuck
+alias fuck="fuck --yeah"
+[[ -f ${BREW_PREFIX}/bin/thefuck ]] && eval $(thefuck --alias fuck)
 
 # Load private zsh settings
 [[ -f $HOME/.zshlocal ]] && source $HOME/.zshlocal
