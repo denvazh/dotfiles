@@ -140,3 +140,6 @@ package-lock.json
 # Special envfiles with sensitive tokens
 .env
 .env.local
+
+# Run scripts
+run_*.sh
