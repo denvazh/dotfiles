@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+BEETLE_DIR=$HOME/devel/workspace/beetle
+
+pushd $BEETLE_DIR 2>&1>/dev/null
+  docker-compose run --rm redshift-console "$@"
+popd 2>&1>/dev/null
